@@ -25,3 +25,4 @@ with open("output.csv", "r") as csv_file:
     for row in reader:
         currencies[row["code"]] = row["ask"]
 # print(currencies)
+"""
