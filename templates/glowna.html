@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Kalkulator walut</title>
+</head>
+
+<body>
+    <form method="post">
+        <div class="container">
+            <label for="cars">Wybierz walutę:</label>
+
+            <select name="waluta" id="waluta">
+                {% for key, value in currencies.items() %}
+                <option value="{{ key }}">{{ key }}</option>
+                {% endfor %}
+            </select> <br>
+
+
+            <label for="name">Ilość waluty do kupienia:</label>
+            <input type="number" id="val" name="val"><br><br>
+
+            <input type="submit" value="Oblicz">
+            <input type="number" placeholder="     Koszt zakupu w PLN"
+                style="background-color:cornsilk;font-weight:bold" value="{{ result }}" readonly>
+        </div>
+    </form>
+</body>
+
+</html>
